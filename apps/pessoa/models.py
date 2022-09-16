@@ -6,3 +6,6 @@ class Pessoa(models.Model):
     idade = models.IntegerField()
     nif = models.IntegerField(max_length=9)
     email = models.EmailField()
+
+    def __str__(self):
+        return f'{self.nome} : {self.nif}'
