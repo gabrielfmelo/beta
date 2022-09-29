@@ -9,7 +9,8 @@
         {{ form|crispy }}
 
         <br></br>
-        <button class="btn btn-dark btn-lg" type="submit">criar</button>
+        <button class="btn btn-outline-dark btn-lg" type="submit"><i class="fa-solid fa-plus"></i></button>
+        <a class="btn btn-outline-danger btn-lg" href="{% url 'pessoa:lista' %}"><i class="fa-sharp fa-solid fa-arrow-left"></i></a>
 
     </form>
 
