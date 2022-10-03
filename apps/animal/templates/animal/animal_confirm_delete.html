@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class = "content-section">
+    <h3>Animal</h3>
+    <hr>
+
+    <form method="POST">
+        {% csrf_token %}
+        <p>Tem a certeza que pretende eliminar este objeto {{ object.especie }} {{ object.nome }}</p>
+        {{ form }}
+
+        <br></br>
+
+        <button class="btn btn-outline-danger btn-lg" type="submit"><i class="fa-solid fa-check"></i></button>
+        <a class="btn btn-outline-primary btn-lg" href ="{% url 'animal:lista' %}"><i class="fa-sharp fa-solid fa-arrow-left"></i></a>
+
+    </form>
+
+</div>
+
+
+{% endblock %}

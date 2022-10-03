@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class = "content-section">
+    <h3>Pessoa</h3>
+    <hr>
+    <form method="POST">
+        {% csrf_token %}
+
+        {{ form|crispy }}
+
+        <br></br>
+
+        <button class="btn btn-outline-dark btn-lg" type="submit"><i class="fa-solid fa-floppy-disk"></i></i></button>
+        <a class="btn btn-outline-danger btn-lg" href="{% url 'pessoa:lista' %}"><i class="fa-sharp fa-solid fa-arrow-left"></i></a>
+        <td><a href="{% url 'pessoa:atualizar' object.id %}"></a></td>
+
+    </form>
+
+</div>
+
+
+{% endblock %}

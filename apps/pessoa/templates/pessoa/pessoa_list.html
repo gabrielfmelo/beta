@@ -13,6 +13,8 @@
         <th>Nif</th>
         <th>Email</th>
         <th></th>
+        <th></th>
+        <th></th>
     </tr>
 
 {% for object in object_list %}
@@ -21,7 +23,9 @@
     <td>{{ object.idade }}</td>
     <td>{{ object.nif }}</td>
     <td>{{ object.email }}</td>
-    <td> <a class="btn btn-dark btn-lg" href="{% url 'pessoa:detalhe' object.id %}"><i class="fa-solid fa-eye"></i></a></td>
+    <td><a class="btn btn-dark btn-lg" href="{% url 'pessoa:detalhe' object.id %}"><i class="fa-solid fa-eye"></i></a></td>
+    <td><a class="btn btn-primary btn-lg" href="{% url 'pessoa:atualizar' object.id %}"><i class="fa-solid fa-pencil"></i></a></td>
+    <td><a class="btn btn-danger btn-lg" href="{% url 'pessoa:eliminar' object.id %}"><i class="fa-solid fa-trash"></i></td>
 </tr>
 {% endfor %}
 </table>
