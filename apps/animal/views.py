@@ -25,13 +25,13 @@ class AnimalDetailView(DetailView):
 
 class AnimalUpdateView(UpdateView):
     model = Animal
-    fields = ['nome', 'idade']
+    fields = ['nome', 'idade', 'pessoa']
     template_name = 'animal/animal_update.html' 
     success_url = reverse_lazy('animal:lista')
 
 class AnimalUpdateDetailView(UpdateView):
     model = Animal
-    fields = ['nome', 'idade']
+    fields = ['nome', 'idade', 'pessoa']
     template_name = 'animal/animal_detail_update.html' 
     
     def get_success_url(self):

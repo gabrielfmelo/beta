@@ -20,7 +20,7 @@ class PessoaDetailView(DetailView):
 
 class PessoaUpdateView(UpdateView):
     model = Pessoa
-    fields = ['nome','idade', 'email']
+    fields = ['nome','idade', 'email', 'cc']
     template_name = 'pessoa/pessoa_update.html' 
     success_url = reverse_lazy('pessoa:lista')
 

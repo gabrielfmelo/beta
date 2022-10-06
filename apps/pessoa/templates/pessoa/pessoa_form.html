@@ -4,9 +4,26 @@
 {% block content %}
 <div class = "content-section">
     <form method="POST">
+        <h3>Pessoa</h3>
+        <hr>
         {% csrf_token %}
-
-        {{ form|crispy }}
+        <div class ="row">
+            <div class ="col-12 col-md-4">
+                {{ form.nome|as_crispy_field }}
+            </div>
+            <div class ="col-12 col-md-4">
+                {{ form.idade|as_crispy_field }}
+            </div>
+            <div class ="col-12 col-md-4">
+                {{ form.nif|as_crispy_field }}
+            </div>
+            <div class ="col-12 col-md-4">
+                {{ form.email|as_crispy_field }}
+            </div>
+            <div class ="col-12 col-md-4">
+                {{ form.cc|as_crispy_field }}
+            </div>
+        </div>
 
         <br></br>
         <button class="btn btn-outline-dark btn-lg" type="submit"><i class="fa-solid fa-plus"></i></button>

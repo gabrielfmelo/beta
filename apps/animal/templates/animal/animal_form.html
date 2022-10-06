@@ -9,7 +9,20 @@
     <form method="POST">
         {% csrf_token %}
 
-        {{ form|crispy }}
+        <div class = "row">
+            <div class="col-12 col-md-3">
+                {{ form.nome|as_crispy_field }}
+            </div>
+            <div class="col-12 col-md-3">
+                {{ form.especie|as_crispy_field }}
+            </div>
+            <div class="col-12 col-md-3">
+                {{ form.idade|as_crispy_field }}
+            </div>
+            <div class="col-12 col-md-3">
+                {{ form.pessoa|as_crispy_field }}
+            </div>
+        </div>
 
         <br></br>
 
